@@ -22,6 +22,11 @@
      $ gem install camome_gc_watcher
    #+END_SRC
 
+   From source code:
+   #+BEGIN_SRC ruby
+     $ bundle install --path=vendor/bundle --binstubs=bin
+   #+END_SRC
+
 ** Usage
 
    TODO: Write usage instructions here
