@@ -33,7 +33,12 @@
 
 ** Development
 
-   After checking out the repo, run =bin/setup= to install
+   After checking out the repo,
+   #+BEGIN_SRC ruby
+     $ bin/grpc_tools_ruby_protoc -I proto/ --ruby_out=lib/proto --grpc_out=lib/proto proto/camome/calendar/event.proto
+   #+END_SRC
+
+   and run =bin/setup= to install
    dependencies. Then, run =rake spec= to run the tests. You can also
    run =bin/console= for an interactive prompt that will allow you to
    experiment.
