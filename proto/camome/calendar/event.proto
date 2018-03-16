@@ -1,0 +1,43 @@
+syntax = "proto3";
+package camome.calendar;
+
+import "google/protobuf/timestamp.proto";
+
+option java_package = "org.nomlab.camome";
+option java_outer_classname = "EventProtos";
+option csharp_namespace = "Camome.Calendar.Event";
+
+service Sounder {
+  rpc SayEvent (Event) returns (Result) {}
+}
+
+service Slack {
+  rpc SayEvent (Event) returns (Result) {}
+}
+
+message Date {
+  google.protobuf.Timestamp date = 1;
+}
+
+message DateTime {
+  google.protobuf.Timestamp dateTime = 1;
+  string timeZone = 2;
+}
+
+message DateOrTime {
+  oneof DateOrTime {
+    Date date = 1;
+    DateTime dateTime = 2;
+  }
+}
+
+message Event {
+  DateOrTime start = 1;
+  DateOrTime end = 2;
+  string summary = 3;
+  string description = 4;
+}
+
+message Result {
+  bool result = 1;
+}
