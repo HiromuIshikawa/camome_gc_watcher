@@ -6,12 +6,12 @@ require "camome_gc_watcher/version"
 Gem::Specification.new do |spec|
   spec.name          = "camome_gc_watcher"
   spec.version       = CamomeGcWatcher::VERSION
-  spec.authors       = ["Yoshinari Nomura"]
-  spec.email         = ["TODO: Write your email address"]
+  spec.authors       = ["Nomura Laboratory, Hiromu, Ishikawa, Yoshinari Nonura"]
+  spec.email         = ["nomura.laboratory@gmail.com"]
 
-  spec.summary       = %q{TODO: Write a short summary, because RubyGems requires one.}
-  spec.description   = %q{TODO: Write a longer description or delete this line.}
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.summary       = %q{Watch Google calenar and send events via gRPC to upstreams.}
+  spec.description   = %q{Watch Google calenar and send events via gRPC to upstreams.}
+  spec.homepage      = "https://github.com/nomlab/camome_gc_watcher"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
