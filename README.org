@@ -34,12 +34,19 @@
 ** Development
 
    After checking out the repo,
-   #+BEGIN_SRC ruby
-     $ bin/grpc_tools_ruby_protoc -I proto/ --ruby_out=lib/proto --grpc_out=lib/proto proto/camome/calendar/event.proto
-   #+END_SRC
 
-   and run =bin/setup= to install
-   dependencies. Then, run =rake spec= to run the tests. You can also
+   1. Install dependencies:
+     #+BEGIN_SRC ruby
+     $ bundle install --path=vendor/bundle --binstubs=bin
+     #+END_SRC
+
+   2. Generate gRPC code:
+     #+BEGIN_SRC ruby
+     $ mkdir lib/proto
+     $ bin/grpc_tools_ruby_protoc -I proto/ --ruby_out=lib/proto --grpc_out=lib/proto proto/camome/calendar/event.proto
+     #+END_SRC
+
+   Then, run =rake spec= to run the tests. You can also
    run =bin/console= for an interactive prompt that will allow you to
    experiment.
 
@@ -53,7 +60,7 @@
 ** Contributing
 
    Bug reports and pull requests are welcome on GitHub at
-   https://github.com/yoshinari-nomura/camome_gc_watcher.
+   https://github.com/nomlab/camome_gc_watcher.
 
 ** License
 
